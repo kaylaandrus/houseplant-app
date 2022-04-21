@@ -6,13 +6,21 @@ import { AppComponent } from './app.component';
 import { MyPlantsComponent } from './my-plants/my-plants.component';
 import { AllPlantsComponent } from './all-plants/all-plants.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PlantDetailsComponent } from './plant-details/plant-details.component';
+import { ScheduleComponent } from './schedule/schedule.component';
+import { EditPlantComponent } from './edit-plant/edit-plant.component';
+import { SearchbarComponent } from './searchbar/searchbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MyPlantsComponent,
     AllPlantsComponent,
-    NavbarComponent
+    NavbarComponent,
+    PlantDetailsComponent,
+    ScheduleComponent,
+    EditPlantComponent,
+    SearchbarComponent
   ],
   imports: [
     BrowserModule,

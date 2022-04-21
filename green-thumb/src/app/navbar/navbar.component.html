@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a
+    class="navbar-brand brand"
+    id="brand"
+    style="cursor: pointer"
+    routerLink="/my-plants"
+    >Green Thumb</a
+  >
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarToggler"
+    aria-label="Toggle navigation"
+    aria-controls="navbarToggler"
+    aria-expanded="false"
+    (click)="collapsed = !collapsed"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div
+    class="collapse navbar-collapse"
+    id="navbarToggler"
+    [class.collapse]="collapsed"
+    (window:resize)="collapsed = true"
+  >
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          style="cursor: pointer"
+          routerLink="/my-plants"
+          routerLinkActive="active"
+          >My Greenhouse</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          style="cursor: pointer"
+          routerLink="/all-plants"
+          routerLinkActive="active"
+          >Browse Plants</a
+        >
+      </li>
+    </ul>
+
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown" appDropdown>
+        <a
+          class="nav-link dropdown-toggle"
+          style="cursor: pointer"
+          id="navbarDropdownMenuLink"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+        >
+          Settings
+        </a>
+        <div
+          class="dropdown-menu"
+          aria-labelledby="navbarDropdownMenuLink"
+        ></div>
+      </li>
+    </ul>
+  </div>
+</nav>

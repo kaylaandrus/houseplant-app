@@ -1,10 +1,15 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { Plant } from './plant.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PlantServiceService {
+  myPlantsChanged = new Subject<[]>();
+  slice() {
+    throw new Error('Method not implemented.');
+  }
   private availablePlants: Plant[] = [
     new Plant(
       'Swiss Cheese Plant',
@@ -23,5 +28,8 @@ export class PlantServiceService {
     ),
   ];
 
-  constructor() {}
+  addPlantToMyPlants(plant: Plant) {
+    this.availablePlants.push(plant);
+    this.myPlantsChanged.next;
+  }
 }
