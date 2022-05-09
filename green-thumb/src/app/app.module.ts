@@ -10,6 +10,7 @@ import { PlantDetailsComponent } from './plant-details/plant-details.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { EditPlantComponent } from './edit-plant/edit-plant.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
+import { PlantResultsComponent } from './all-plants/plant-results/plant-results.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
     PlantDetailsComponent,
     ScheduleComponent,
     EditPlantComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    PlantResultsComponent
   ],
   imports: [
     BrowserModule,
